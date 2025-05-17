@@ -24,4 +24,4 @@ echo "  tg://proxy?server=${PUBLIC_IP}&port=8443&secret=${SECRET_KEY}"
 echo "============ MTProxy ============"
 echo ""
 
-/opt/MTProxy/mtproto-proxy -u mtproxy -p 8888 -H 8443 -S "${SECRET_KEY}" --aes-pwd proxy-secret proxy-multi.conf -M 1 --http-stats --nat-info "$PRIVATE_IP:$PUBLIC_IP"
+/opt/MTProxy/mtproto-proxy -u mtproxy -p 8888 -H 8443 -S "${SECRET_KEY}" -P "${PROXY_TAG}" --aes-pwd proxy-secret proxy-multi.conf -M 1 --http-stats --nat-info "$PRIVATE_IP:$PUBLIC_IP"
