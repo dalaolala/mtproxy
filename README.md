@@ -1,3 +1,10 @@
+
+# ADD TAG
+```
+docker build -t mmtp .
+docker run -d -p 8443:8443 -p 8888:8888 -e SECRET_KEY=efea0da41a7a71190b04f8e6a02248ef -e PROXY_TAG=6eecaf6e91388991b22633632e88d51f mmtp
+```
+
 # MTProxy
 
 This repository contains the source for a Docker image for Telegram MTProxy, based on Ubuntu 24.04. The official [Telegram MTProxy repository](https://github.com/TelegramMessenger/MTProxy) hasn't been updated or maintained in over five years.
